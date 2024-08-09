@@ -211,6 +211,9 @@ public class MovilityAppController {
     public String obtainRoute(String in, String out) {
         destination = locationsIndex.get(out);
         source = locationsIndex.get(in);
+        if (source == null || destination == null) {
+            return "La salida y/o el destino no existe";
+        }
         dijkstra(adj);
         return getSolution();
     }

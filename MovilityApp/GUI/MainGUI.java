@@ -35,6 +35,7 @@ public class MainGUI extends JFrame{
                         JOptionPane.showMessageDialog(null,"El archivo debe ser de formato .txt.","Error",JOptionPane.ERROR_MESSAGE);
                         return;
                     }
+                    seleccionarArchivoButton.setEnabled(false);
                     RouteSelectorGUI routeSelectorGUI = new RouteSelectorGUI(new MovilityAppController(selectedFile.getAbsolutePath()));
                     routeSelectorGUI.setVisible(true);
                     dispose();
